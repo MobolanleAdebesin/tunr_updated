@@ -10,7 +10,7 @@
 <ul>
   {% for song in artist.songs.all %}
   <li>
-    <a href="">{{ song.title }}-{{ song.album }}</a>
+    <a href="{% url 'song_detail' pk=song.pk %}">{{ song.title }}-{{ song.album }}</a>
   </li>
   {% endfor %}
 </ul>
